@@ -1,0 +1,29 @@
+.about {
+    @media screen and (max-width: 1200px) {
+        display: none;
+    }
+    padding-top: 0;
+}
+.about__list {
+    display: flex;
+    align-items: center;
+}
+.about__item + .about__item {
+    margin-left: 30px;
+}
+.about__wraper {
+    position: relative;
+}
+.about__img {
+    display: block;
+}
+.about__title {
+    color: var(--primary-white-color);
+    text-align: center;
+    padding: 27px 0px;
+    bottom: 0;
+    width: 370px;
+    height: 70px;
+    background: rgba(47, 48, 58, 0.8);
+    position: absolute;
+}

@@ -1,0 +1,29 @@
+.person__list {
+    display: flex;
+    justify-content: center;
+}
+.person__link {
+    width: 44px;
+    height: 44px;
+    background-color: var(--primary-white-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color var(--timing-anim);
+    &:hover, &:focus {
+        background-color: var(--accent-color);
+    }
+}
+.person__icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--icon-primary);
+    transition: fill var(--timing-anim);
+    .person__link:hover &, .person__link:focus & {
+        fill: var(--primary-white-color);
+    }
+}
+.person__item + .person__item {
+    margin-left: 10px;
+}

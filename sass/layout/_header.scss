@@ -1,0 +1,19 @@
+.header__menu {
+    display: flex;
+    align-items: center;
+}
+.header__border {
+    border-bottom: 1px solid #ECECEC;
+}
+.menu-btn, .mob-menu__btn {
+    display: block;
+    margin-left: auto;
+    border: none;
+    background-color: transparent;
+    &:hover, &:focus {
+        fill: var(--accent-color);
+    }
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
