@@ -1,5 +1,4 @@
 .card-list {
-    
     @media screen and (min-width:768px) {
         display: flex;
         flex-wrap: wrap;
@@ -16,6 +15,7 @@
     display: flex;
     @media screen and (min-width:768px) {
         flex-direction: column;
+        width: calc(50% - 15px);
         &:not(:last-child) {
             margin-right: 30px;
         }
@@ -27,6 +27,7 @@
         }
     }
     @media screen and (min-width:1200px) {
+        width: calc((100% + 30px) / 3 - 30px);
         &:not(:last-child) {
             margin-right: 30px;
             margin-bottom: 30px;
@@ -49,12 +50,13 @@
     background-color: rgba(33, 150, 243, 0.9);
     position: absolute;
     top: 0;
-    transform: translateY(100%);
+    transform: translateY(101%);
     transition: var(--timing-anim);
     .card-list__link:hover &,
     .card-list__link:focus & {
         transform: translateY(0%);
     }
+    overflow: auto;
 }
 .card-list__link {
     display: flex;
@@ -68,6 +70,7 @@
     letter-spacing: 0.03em;
     color: var(--primary-white-color);
     padding: 63px 24px;
+    
 }
 .card-list__site {
     border-right: 1px solid #EEEEEE;

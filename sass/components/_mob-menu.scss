@@ -9,7 +9,7 @@
     height: 100vh;
     z-index: 1;
     transform: translateY(100%);
-    transition: var(--timing-anim);
+    transition: transform 250ms ease-in-out;
     .conteiner {
         display: flex;
         flex-direction: column;
@@ -36,6 +36,9 @@
     line-height: 1,18;
     letter-spacing: 0.02em;
     color: var(--accent-color);
+    @media screen and (max-width: 439px) {
+        font-size: 7vw;
+    }
 }
 .mob-contact__mail {
     font-weight: 500;

@@ -88,8 +88,8 @@
 }
 .form__span-icon {
     content: "";  
-    width: 16px;
-    height: 15px;
+    min-width: 16px;
+    min-height: 15px;
     margin-right: 8px;
     border: 2px solid;
     border-color: var(--secondery-text-color);

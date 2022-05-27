@@ -9,6 +9,10 @@
     transform: translate(-50%, -50%) scale(1) skew(0deg, 0deg);
     transition: var(--timing-anim);
     padding: 40px;
+    @media screen and (max-width:450px) {
+        width: 100vw;
+        max-height: 100%;  
+    }
     @media screen and (min-width:1200px) {
         width: 528px;
         min-height: 581px;    

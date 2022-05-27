@@ -220,6 +220,7 @@ button {
   background-color: rgba(0, 0, 0, 0.1);
   -webkit-transition: var(--timing-anim);
   transition: var(--timing-anim);
+  overflow-y: auto;
 }
 
 .backdrop.is-hidden .modal {
@@ -240,6 +241,13 @@ button {
   -webkit-transition: var(--timing-anim);
   transition: var(--timing-anim);
   padding: 40px;
+}
+
+@media screen and (max-width: 450px) {
+  .modal {
+    width: 100vw;
+    max-height: 100%;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -440,8 +448,8 @@ button {
 
 .form__span-icon {
   content: "";
-  width: 16px;
-  height: 15px;
+  min-width: 16px;
+  min-height: 15px;
   margin-right: 8px;
   border: 2px solid;
   border-color: var(--secondery-text-color);
@@ -542,8 +550,10 @@ button {
   z-index: 1;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
-  -webkit-transition: var(--timing-anim);
-  transition: var(--timing-anim);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
 }
 
 .mob-menu .conteiner {
@@ -581,6 +591,12 @@ button {
   line-height: 1,18;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+}
+
+@media screen and (max-width: 439px) {
+  .mob-contact__tel {
+    font-size: 7vw;
+  }
 }
 
 .mob-contact__mail {
@@ -1218,7 +1234,7 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 100vw;
+  max-width: 1600px;
   text-align: center;
   padding: 118px 0;
   margin-left: auto;
@@ -1234,7 +1250,6 @@ button {
 
 @media screen and (min-width: 768px) {
   .hero {
-    width: 768px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/header-t.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/header-t.jpg);
   }
@@ -1249,7 +1264,6 @@ button {
 
 @media screen and (min-width: 1200px) {
   .hero {
-    width: 1200px;
     padding: 200px 0;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/header.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/header.jpg);
@@ -1453,6 +1467,7 @@ button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: calc(50% - 15px);
   }
   .card-list__item:not(:last-child) {
     margin-right: 30px;
@@ -1466,6 +1481,9 @@ button {
 }
 
 @media screen and (min-width: 1200px) {
+  .card-list__item {
+    width: calc((100% + 30px) / 3 - 30px);
+  }
   .card-list__item:not(:last-child) {
     margin-right: 30px;
     margin-bottom: 30px;
@@ -1489,10 +1507,11 @@ button {
   background-color: rgba(33, 150, 243, 0.9);
   position: absolute;
   top: 0;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  -webkit-transform: translateY(101%);
+          transform: translateY(101%);
   -webkit-transition: var(--timing-anim);
   transition: var(--timing-anim);
+  overflow: auto;
 }
 
 .card-list__link:hover .card-list__card,
